@@ -1,0 +1,10 @@
+CC;12345678;Carlos;Ramírez
+CC;87654321;María;González
+CC;11223344;Luis;Pérez
+CC;22334455;Ana;Martínez
+CC;33445566;Jorge;López
+CC;44556677;Sofía;García
+CC;55667788;Ricardo;Díaz
+CC;66778899;Lucía;Fernández
+CC;77889900;Fernando;Torres
+CC;88990011;Marta;Ríos

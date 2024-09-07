@@ -1,0 +1,10 @@
+001;Laptop HP;3000
+002;Mouse Logitech;25
+003;Teclado Mecánico;80
+004;Monitor Samsung;200
+005;Impresora Canon;150
+006;Tablet Lenovo;400
+007;Auriculares Sony;50
+008;Cámara Nikon;500
+009;Disco Duro Seagate;100
+010;Router TP-Link;40
