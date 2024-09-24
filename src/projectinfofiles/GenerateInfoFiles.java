@@ -18,14 +18,14 @@ public class GenerateInfoFiles {
 	// se crea un HashMap para guardar el documento del vendedor como clave y poder
 	// referenciarlo y/o utilizar facilmente esta información
 	private HashMap<String, String> sellers = new HashMap<>();
-	//// se crea un HashMap para guardar el id del producto como clave y poder
-	//// referenciarlo y/o utilizar facilmente esta información
+	// se crea un HashMap para guardar el id del producto como clave y poder
+	// referenciarlo y/o utilizar facilmente esta información
 	private HashMap<String, Product> products = new HashMap<>();
 	// Lista para almacenar las ventas
 	private List<Sale> sales = new ArrayList<>();
 
 	/**
-	 * Método que la información del archivo SellerInformation, es decir, de los
+	 * Método que lee la información del archivo SellerInformation, es decir, de los
 	 * vendedores y su número de documento
 	 * 
 	 * @param filePath ruta general de los archivos
@@ -105,7 +105,7 @@ public class GenerateInfoFiles {
 
 	
 	/**
-	 * clase principal
+	 * método main de la clase principal
 	 * @param args default
 	 */
 	public static void main(String[] args) {
