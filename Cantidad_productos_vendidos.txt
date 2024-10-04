@@ -1,0 +1,10 @@
+Auriculares Sony;50.0;49
+Mouse Logitech;25.0;48
+Router TP-Link;40.0;42
+Teclado Mecánico;80.0;36
+Impresora Canon;150.0;30
+Disco Duro Seagate;100.0;23
+Tablet Lenovo;400.0;17
+Cámara Nikon;500.0;17
+Monitor Samsung;200.0;14
+Laptop HP;3000.0;13
