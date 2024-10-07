@@ -1,0 +1,10 @@
+Sofía García; 15415.0
+Marta Ríos; 13890.0
+Jorge López; 8390.0
+Carlos Ramírez; 7975.0
+Lucía Fernández; 6445.0
+Luis Pérez; 5800.0
+Ricardo Díaz; 4295.0
+Fernando Torres; 4130.0
+María González; 3240.0
+Ana Martínez; 2530.0
