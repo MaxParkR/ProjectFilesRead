@@ -15,13 +15,19 @@ import java.util.*;
  */
 public class GenerateInfoFiles {
 
-	// se crea un HashMap para guardar el documento del vendedor como clave y poder
-	// referenciarlo y/o utilizar facilmente esta información
+	/**
+	 *  se crea un HashMap para guardar el documento del vendedor como clave y poder
+	 *  referenciarlo y/o utilizar facilmente esta información
+	 */
 	public HashMap<String, String> sellers = new HashMap<>();
-	// se crea un HashMap para guardar el id del producto como clave y poder
-	// referenciarlo y/o utilizar facilmente esta información
+	/**
+	 * se crea un HashMap para guardar el id del producto como clave y poder
+	 * referenciarlo y/o utilizar facilmente esta información
+	 */
 	public HashMap<String, Product> products = new HashMap<>();
-	// Lista para almacenar las ventas
+	/**
+	 * Lista para almacenar las ventas
+	 */
 	public List<Sale> sales = new ArrayList<>();
 
 	/**
@@ -37,8 +43,10 @@ public class GenerateInfoFiles {
 		String line;
 		while ((line = reader.readLine()) != null) {
 			String[] data = line.split(";");
-			// guarda el documento del venderdor como clave y el nombre completo como un
-			// valor
+			/**
+			 *  guarda el documento del venderdor como clave y el nombre completo como un
+			 *  valor
+			 */
 			sellers.put(data[1], data[2] + " " + data[3]); // Se guarda el documento del vendedor como clave
 		}
 		System.out.println("Archivo de los vendedores leido correctamente");
@@ -56,8 +64,11 @@ public class GenerateInfoFiles {
 		String line;
 		while ((line = reader.readLine()) != null) {
 			String[] data = line.split(";");
-			// guarda el ID de producto como clave y un objeto de tipo producto que tiene el
-			// ID, nombre y precio del producto como valores
+			/**
+			 *  guarda el ID de producto como clave y un objeto de tipo producto que tiene el
+			 *  ID, nombre y precio del producto como valores
+			 */
+			
 			products.put(data[0], new Product(data[0], data[1], Double.parseDouble(data[2])));
 		}
 		System.out.println("Archivo de productos leído correctamente");
@@ -75,24 +86,33 @@ public class GenerateInfoFiles {
 		File[] files = salesFiles.listFiles((dir, name) -> name.endsWith(".txt")
 				&& !name.equals("SellerInformation.txt") && !name.equals("ProductData.txt"));
 		if (files != null) {
-			// for each que va a iterar sobre cada archivo de los vendedores
+			/**
+			 * for each que va a iterar sobre cada archivo de los vendedores
+			 */
 			for (File file : files) {
 				BufferedReader reader = new BufferedReader(new FileReader(file));
 
-				// Esta primera linea se lee para identificar al trabajador
+				/**
+				 *  Esta primera linea se lee para identificar al trabajador
+				 */
 				String firstLine = reader.readLine();
 				String[] sellerData = firstLine.split(";");
 				String iDNumberSeller = sellerData[1];
 
-				// Las demas lineas contienen la información restante que pertenece a los
-				// productos que vendió
+				/**
+				 *  Las demas lineas contienen la información restante que pertenece a los
+				 *  productos que vendió
+				 */
+				
 				String line;
 				while ((line = reader.readLine()) != null) {
 					String[] infoSale = line.split(";");
 					String idProduct = infoSale[0];
 					int quantitySoldProduct = Integer.parseInt(infoSale[1]);
 
-					// Guardar la venta en la lista
+					/**
+					 *  Guardar la venta en la lista
+					 */
 					sales.add(new Sale(iDNumberSeller, idProduct, quantitySoldProduct));
 				}
 				System.out.println("Archivo del vendedor:  "+ sellers.get(iDNumberSeller) + " leído correctamente.");
